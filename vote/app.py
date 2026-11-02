@@ -6,8 +6,12 @@ import random
 import json
 import logging
 
+# --- DEFINITIONS ---
+# Ensure all four options are defined here
 option_a = os.getenv('OPTION_A', "Cats")
 option_b = os.getenv('OPTION_B', "Dogs")
+option_c = os.getenv('OPTION_C', "Birds")
+option_d = os.getenv('OPTION_D', "Monkeys")
 hostname = socket.gethostname()
 
 app = Flask(__name__)
@@ -38,8 +42,12 @@ def hello():
 
     resp = make_response(render_template(
         'index.html',
+        # --- PASSING TO HTML ---
+        # Ensure all four options are passed here
         option_a=option_a,
         option_b=option_b,
+        option_c=option_c,
+        option_d=option_d,
         hostname=hostname,
         vote=vote,
     ))

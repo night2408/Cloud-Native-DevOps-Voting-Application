@@ -1,112 +1,119 @@
-@import url(//fonts.googleapis.com/css?family=Open+Sans:400,700,600);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-*{
-  box-sizing:border-box;
+:root {
+  --color-cats: #2196f3;
+  --color-dogs: #00cbca;
+  --background: #f0f4f8;
+  --text-dark: #333;
+  --card-bg: #ffffff;
+  --card-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
 }
-html,body{
-  margin:0;
-  padding:0;
-  height:100%;
-  font-family: 'Open Sans';
+
+* {
+  box-sizing: border-box;
 }
-body{
-  opacity:0;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background);
+  color: var(--text-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  opacity: 0;
   transition: all 1s linear;
 }
 
-.divider{
-  height: 150px;
-  width:2px;
-  background-color: #C0C9CE;
-  position: relative;
-  top: 50%;
-  float: left;
-  transform: translateY(-50%);
+#content-container {
+  width: 95%;             /* Increased from 90% */
+  max-width: 1100px;      /* Increased to make the box wider */
+  background-color: var(--card-bg);
+  padding: 60px 80px;     /* More padding on left & right */
+  border-radius: 20px;
+  box-shadow: var(--card-shadow);
+  text-align: center;
 }
 
-#background-stats-1{
-  background-color: #2196f3;
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 50px;
 }
 
-#background-stats-2{
-  background-color: #00cbca;
+#results-wrapper {
+  width: 100%;
 }
 
-#content-container{
-  z-index:2;
-  position:relative;
-  margin:0 auto;
-  display:table;
-  padding:10px;
-  max-width:940px;
-  height:100%;
+.result-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 35px;  /* More space between each row */
+  width: 100%;
 }
-#content-container-center{
-  display:table-cell;
-  text-align:center;
-  vertical-align:middle;
-}
-#result{
-  z-index: 3;
-  position: absolute;
-  bottom: 40px;
-  right: 20px;
-  color: #fff;
-  opacity: 0.5;
-  font-size: 45px;
+
+.label {
+  width: 20%;                 /* Increased space for text */
+  font-size: 1.6rem;
   font-weight: 600;
-}
-#choice{
-  transition: all 300ms linear;
-  line-height:1.3em;
-  background:#fff;
-  box-shadow: 10px 0 0 #fff, -10px 0 0 #fff;
-  vertical-align:middle;
-  font-size:40px;
-  font-weight: 600;
-  width: 450px;
-  height: 200px;
-}
-#choice a{
-  text-decoration:none;
-}
-#choice a:hover, #choice a:focus{
-  outline:0;
-  text-decoration:underline;
-}
-
-#choice .choice{
-  width: 49%;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
   text-align: left;
-  padding-left: 50px;
+  margin-right: 25px;         /* Added margin between text & bar */
 }
 
-#choice .choice .label{
-  text-transform: uppercase;
+.bar-container {
+  width: 65%;                 /* Made bar longer */
+  height: 45px;
+  background-color: #e9e9e9;
+  border-radius: 25px;
+  overflow: hidden;
 }
 
-#choice .choice.dogs{
-  color: #00cbca;
-  float: right;
-}
-
-#choice .choice.cats{
-  color: #2196f3;
-  float: left;
-}
-#background-stats{
-  z-index:1;
-  height:100%;
-  width:100%;
-  position:absolute;
-}
-#background-stats div{
+.bar {
+  height: 100%;
+  width: 50%;
   transition: width 400ms ease-in-out;
-  display:inline-block;
-  margin-bottom:-4px;
-  width:50%;
-  height:100%;
+  border-radius: 25px;
+}
+
+#background-stats-1 {
+  background-color: var(--color-cats);
+}
+
+#background-stats-2 {
+  background-color: var(--color-dogs);
+}
+
+.stat {
+  width: 15%;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: right;
+  padding-left: 20px;
+}
+
+#result {
+  margin-top: 40px;
+  color: #777;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+:root {
+  /* ... your existing root variables ... */
+  --color-birds: #f9a825; /* Example color for Birds */
+  --color-monkey: #d81b60;  /* Example color for monkey--color-monkey */
+}
+
+#background-stats-3 {
+  background-color: var(--color-birds);
+}
+
+#background-stats-4 {
+  background-color: var(--color-monkey);
 }
